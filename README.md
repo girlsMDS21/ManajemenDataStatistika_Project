@@ -1,4 +1,4 @@
-KELOMPOK 2 - PROGRESS PROJECT (part 1) <br />
+KELOMPOK 2 - PROGRESS PROJECT <br />
 
 Fradha Intan Arassah     - Technical Writer <br />
 Reka Agustia Astari      - Shiny Developer <br />
@@ -180,5 +180,6 @@ Berikut, deskripsi dan query SQL untuk membuat tabel:
 
 sehingga, diperoleh ER Diagram dari tabel-tabel yang sudah dibuat:
 
-![hello](https://user-images.githubusercontent.com/39205545/221522351-f02c313e-cea6-4abe-a7b1-b193072218c3.png)
+![ERD update](https://user-images.githubusercontent.com/39205545/222873416-4a2f512b-e2c7-44ed-8783-9e2f62c92a7a.png)
+
 

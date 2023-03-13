@@ -1,4 +1,4 @@
-![](https://png.pngtree.com/element_our/20190604/ourlarge/pngtree-skin-care-cosmetics-illustration-image_1467971.jpg/150x150){width="150"}
+<img width="150" alt="Skincare" src="https://user-images.githubusercontent.com/39205545/224728354-0909553e-6dd6-490d-9a59-14e067591912.png">
 
 # My Skincare
 
@@ -29,16 +29,17 @@
 Data yang digunakan pada project ini adalah data skincare. Data tersebut diperoleh dari hasil scrapping dan google dengan link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv.>
 
 ## Screenshot Shiny
-
-![](ss.png){width="750"}
+![ss](https://user-images.githubusercontent.com/39205545/224727119-3ebf841f-0d76-4fc6-a2dd-cae3509ec61e.png)
 
 ## Skema
 
-![](Skema%20Database.png){width="500"}
+<img width="500" alt="Skema Database" src="https://user-images.githubusercontent.com/39205545/224727239-e6227c6a-363b-4302-a598-500f4c46f357.png">
+
 
 ## ER Diagram
 
-![](ERD%20update.png){width="500"}
+<img width="500" alt="ERD update" src="https://user-images.githubusercontent.com/39205545/224727336-cc4703de-30c1-4814-a8da-fc45f747cb17.png">
+
 
 ## Deskripsi Data
 

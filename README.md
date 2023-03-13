@@ -1,4 +1,4 @@
-![](images/hello-01.jpg){width="150"}
+![](https://png.pngtree.com/element_our/20190604/ourlarge/pngtree-skin-care-cosmetics-illustration-image_1467971.jpg/150x150){width="150"}
 
 # My Skincare
 

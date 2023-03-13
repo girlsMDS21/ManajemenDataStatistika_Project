@@ -29,7 +29,8 @@
 Data yang digunakan pada project ini adalah data skincare. Data tersebut diperoleh dari hasil scrapping dan google dengan link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv.>
 
 ## Screenshot Shiny
-![ss](https://user-images.githubusercontent.com/39205545/224727119-3ebf841f-0d76-4fc6-a2dd-cae3509ec61e.png)
+<img width="750" alt="ssdashboard" src="https://user-images.githubusercontent.com/39205545/224741249-c9885e65-14f6-4839-93f0-35410db718c9.PNG">
+
 
 ## Skema
 
@@ -119,10 +120,8 @@ CREATE TABLE IF NOT EXISTS public."Cust"
 
     Tabel ini memiliki isi kolom sebagai berikut:
 
-    `id_cust`: data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel cust dan tabel produk
-
-    `skin_problem` : data text karena setiap cust mempunyai permasalahan kulit yang berbeda-beda.
-
+    `id_cust`: data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel cust dan tabel produk\
+    `skin_problem` : data text karena setiap cust mempunyai permasalahan kulit yang berbeda-beda.\
     `alergi`: data tiap cust memiliki alergi terhadap suatu ingredients atau tidak.
 
     ``` sql
@@ -135,22 +134,16 @@ CREATE TABLE IF NOT EXISTS public."Cust"
     )
     ```
 
-    3.  Tabel Produk
+3.  Tabel Produk
 
-        Tabel ini memiliki isi kolom sebagai berikut:
-
-        `id_cust` : data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel produk
-
-        `id_brand` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada brand yang mereka gunakan, sehingga harus dikategorikan menjadi 52 kategori brand. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel brand.
-
-        `nama_produk` : setiap brand memiliki nama produk yang berbeda-beda sekalipun produk tersebut dari kategori yang sama.
-
-        `komposisi` : setiap produk memiliki komposisi yang berbeda-beda
-
-        `id-kategori` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada kategori produk yang mereka gunakan, sehingga harus dikategorikan menjadi 14 kategori produk. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel kategori_produk.
-
-        `harga` : data integer hasil dari scrapping data di internet. Harga yang tertera pada kolom ini sudah dalam rupiah.
-
+    Tabel ini memiliki isi kolom sebagai berikut:
+    
+    `id_cust` : data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel produk\
+        `id_brand` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada brand yang mereka gunakan, sehingga harus dikategorikan menjadi 52 kategori brand. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel brand\
+        `nama_produk` : setiap brand memiliki nama produk yang berbeda-beda sekalipun produk tersebut dari kategori yang sama.\
+        `komposisi` : setiap produk memiliki komposisi yang berbeda-beda\
+        `id-kategori` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada kategori produk yang mereka gunakan, sehingga harus dikategorikan menjadi 14 kategori produk. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel kategori_produk.\
+        `harga` : data integer hasil dari scrapping data di internet. Harga yang tertera pada kolom ini sudah dalam rupiah.\
         `rating` : data double precision dengan skala rating 1-5.
 
         ``` sql
@@ -182,7 +175,8 @@ CREATE TABLE IF NOT EXISTS public."Cust"
         )
         ```
 
-<!-- -->
+
+
 
 4.  Tabel Skin_Type
 

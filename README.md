@@ -29,17 +29,17 @@
 Deskripsi Database MySkincare
 
 <div align="justify">
-Data yang digunakan pada project ini adalah data skincare. Data tersebut diperoleh dari hasil scrapping dan google dengan link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv.>
-Dalam database skincare yang dikembangkan, terdapat 6 tabel yang saling berelasi, yaitu `customer`, `problem`, `produk`, `brand`, `kategori_produk`, dan `skin_type`.
+Data yang digunakan pada project ini adalah data skincare. Data tersebut diperoleh dari hasil scrapping dan google dengan link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv.>. Dalam database skincare yang dikembangkan, terdapat 6 tabel yang saling berelasi, yaitu customer, problem, produk, brand, kategori_produk, dan skin_type.
 </div>
 
 <div align="justify">
-1.  `Tabel customer.`
-    Dalam data customer memiliki 6 kolom, diantaranya `id_cust`, username, `gender`, `age`, `id_skin_type`, dan `job`. Customer memiliki relationship terhadap data       problem dengan hubungan 1:N (satu ke banyak).
+
+1. `Tabel customer.`
+    Dalam data customer memiliki 6 kolom, diantaranya `id_cust`, `username`, `gender`, `age`, `id_skin_type`, dan `job`. Customer memiliki relationship terhadap data     problem dengan hubungan 1:N (satu ke banyak).
     kolom jenis kelamin akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = laki-laki dan 1 = perempuan.
     kolom usia akan dilakukan random generate number dari 18-65 tahun.
     kolom pekerjaan akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = karyawan dan 1 = lainnya.
-
+    
 2.  `Tabel Problem` memiliki 3 kolom yaitu `id_cust`, `skin_problem`, dan `alergi`.
     Dengan menggunakan data tersebut, akan dibuat riset berdasarkan permasalahan kulit untuk mengetahui kecocokan skincare seseorang berdasarkan ingredients.
     Satu id_cust memiliki permasalahan kulit yang berbeda-beda, namun dari beberapa orang pasti ada juga yang memiliki permasalahan kulit yang sama.\
@@ -232,16 +232,16 @@ Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu
 |:-------------------|:--------------|
 | Kode Program Studi | Kode Fakultas |
 
-  ``` sql
-        CREATE TABLE IF NOT EXISTS public."Produk"
-        (
-            id_cust integer NOT NULL,
-            id_brand integer NOT NULL,
-            nama_produk text COLLATE pg_catalog."default" NOT NULL,
-            komposisi text COLLATE pg_catalog."default" NOT NULL,
-            id_kategori integer NOT NULL,
-            rating double precision NOT NULL,
-            harga integer NOT NULL,
+``` sql
+CREATE TABLE IF NOT EXISTS public."Produk"
+(
+       id_cust integer NOT NULL,
+       id_brand integer NOT NULL,
+       nama_produk text COLLATE pg_catalog."default" NOT NULL,
+       komposisi text COLLATE pg_catalog."default" NOT NULL,
+       id_kategori integer NOT NULL,
+       rating double precision NOT NULL,
+       harga integer NOT NULL,
             CONSTRAINT "Produk_pkey" PRIMARY KEY (id_kategori, id_brand, id_cust),
             CONSTRAINT "Produk_ke_Brand_fkey" FOREIGN KEY (id_brand)
                 REFERENCES public."Brand" (id_brand) MATCH SIMPLE
@@ -258,9 +258,8 @@ Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu
                 ON UPDATE NO ACTION
                 ON DELETE NO ACTION
                 NOT VALID
-        );
-    ```
-
+ );
+ ```
 
 4️⃣ Tabel Skin Type
 <div align="justify">
@@ -277,13 +276,13 @@ Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu
 
 
  ``` sql
-    CREATE TABLE IF NOT EXISTS public."Skin_Type"
-    (
+ CREATE TABLE IF NOT EXISTS public."Skin_Type"
+ (
         id_skin_type integer NOT NULL,
         skin_type text COLLATE pg_catalog."default",
         CONSTRAINT "Skin_Type_pkey" PRIMARY KEY (id_skin_type)
-    );
-    ```
+  );
+  ```
 
 5️⃣  Tabel Brand
 
@@ -299,13 +298,13 @@ Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu
 
 
 ``` sql
-    CREATE TABLE IF NOT EXISTS public."Brand"
-    (
+CREATE TABLE IF NOT EXISTS public."Brand"
+(
         nama_brand text COLLATE pg_catalog."default" NOT NULL,
         id_brand integer NOT NULL,
         CONSTRAINT "Brand_pkey" PRIMARY KEY (id_brand)
-    );
-    ```
+ );
+ ```
 6️⃣  Tabel Kategorik Produk
 
 <div align="justify">
@@ -319,14 +318,15 @@ Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu
 | kategori      | text                  | Kategori              	  |
 
  ``` sql
-    CREATE TABLE IF NOT EXISTS public."Kategori_Produk"
-    (
+ CREATE TABLE IF NOT EXISTS public."Kategori_Produk"
+ (
         id_kategori integer NOT NULL,
         kategori text COLLATE pg_catalog."default" NOT NULL,
         CONSTRAINT "Kategori_Produk_pkey" PRIMARY KEY (id_kategori)
-    );
-    ```
+  );
+  ```
  
+    
 ### :open_file_folder: Struktur Folder
 
 ```

@@ -1,28 +1,28 @@
+<div align="center">
+
 <img width="150" alt="Skincare" src="https://user-images.githubusercontent.com/39205545/224728354-0909553e-6dd6-490d-9a59-14e067591912.png">
 
 # My Skincare
 
-# Menu
+• [Tentang Data Base My Skincare](#memo-tentang-data-base-my-skincare)
+• [Screenshot](#camera_flash-screenshot)
+• [Demo](#video_camera-demo)
+• [Dokumentasi](#blue_book-dokumentasi)
 
-\- [Tentang](#scroll-overview)
+</div>
 
-\- [Screenshot](#rice_scene-screenshot)
+## :bookmark_tabs: Main Menu
 
-\- [Demo](#dvd-demo)
-
-\- [Dokumentasi](#blue_book-documentation)
-
-\- [Requirements](#exclamation-requirements)
-
-\- [Skema Database](#floppy_disk-skema-database)
-
-\- [ERD](#rotating_light-erd)
-
-\- [Deskripsi Data](#heavy_check_mark-deskripsi-data)
-
-\- [Struktur Folder](#open_file_folder-stuktur-folder)
-
-\- [Tim Pengembang](#smiley_cat-tim-pengembang)
+- [Tentang Data Base My Skincare](#memo-tentang-data-base-my-skincare)
+- [Screenshot](#camera_flash-screenshot)
+- [Demo](#video_camera-demo)
+- [Dokumentasi](#blue_book-dokumentasi)
+- [Requirements](#video_camera-requirements)
+- [Skema Database](#computer-skema-database)
+- [Entity Relationship Diagram](#memo-entity-relationship-diagram)
+- [Deskripsi Data](#pencil-deskripsi-data)
+- [Struktur Folder](#open_file_folder-struktur-folder)
+- [Anggota Tim Pengembang](#fireworks-anggota-tim-pengembang)
 
 ## Tentang
 
@@ -38,6 +38,7 @@ Data yang digunakan pada project ini adalah data skincare. Data tersebut diperol
 
 
 ## ER Diagram
+<img width="500" alt="ERD update" src=https://user-images.githubusercontent.com/39205545/226834134-f152e7f2-8c82-4224-bf20-d2d8cb6f7f56.png)
 
 <img width="500" alt="ERD update" src="https://user-images.githubusercontent.com/39205545/224727336-cc4703de-30c1-4814-a8da-fc45f747cb17.png">
 
@@ -234,7 +235,7 @@ CREATE TABLE IF NOT EXISTS public."Cust"
 
 Fradha Intan Arassah : Data Manager
 
-Reka Agustia Astari : Rshiny
+Reka Agustia Astari : Shiny Developer
 
 Firda Aulia Maghfiroh : Tech Writer
 

@@ -24,52 +24,35 @@
 - [Struktur Folder](#open_file_folder-struktur-folder)
 - [Anggota Tim Pengembang](#fireworks-anggota-tim-pengembang)
 
-## Tentang
 
+## :memo: Tentang DataBase MySkincare  
+Deskripsi Database MySkincare
+
+<div align="justify">
 Data yang digunakan pada project ini adalah data skincare. Data tersebut diperoleh dari hasil scrapping dan google dengan link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv.>
+Dalam database skincare yang dikembangkan, terdapat 6 tabel yang saling berelasi, yaitu `customer`, `problem`, `produk`, `brand`, `kategori_produk`, dan `skin_type`.
+</div>
 
-## Screenshot Shiny
-<img width="750" alt="ssdashboard" src="https://user-images.githubusercontent.com/39205545/224741249-c9885e65-14f6-4839-93f0-35410db718c9.PNG">
+<div align="justify">
+1.  `Tabel customer.`
+    Dalam data customer memiliki 6 kolom, diantaranya `id_cust`, username, `gender`, `age`, `id_skin_type`, dan `job`. Customer memiliki relationship terhadap data       problem dengan hubungan 1:N (satu ke banyak).
+    kolom jenis kelamin akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = laki-laki dan 1 = perempuan.
+    kolom usia akan dilakukan random generate number dari 18-65 tahun.
+    kolom pekerjaan akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = karyawan dan 1 = lainnya.
 
-
-## Skema
-
-<img width="500" alt="Skema Database" src="https://user-images.githubusercontent.com/39205545/224727239-e6227c6a-363b-4302-a598-500f4c46f357.png">
-
-
-## ER Diagram
-<img width="500" alt="ERD update" src=https://user-images.githubusercontent.com/39205545/226834134-f152e7f2-8c82-4224-bf20-d2d8cb6f7f56.png)
-
-<img width="500" alt="ERD update" src="https://user-images.githubusercontent.com/39205545/224727336-cc4703de-30c1-4814-a8da-fc45f747cb17.png">
-
-
-## Deskripsi Data
-
-Data yang digunakan pada project ini adalah `data skincare`.\
-Data tersebut diperoleh dari google link: <https://github.com/agorina91/final_project/blob/master/Dash_App_and_Models/skindataall.csv>.\
-Dalam database skincare yang dikembangkan, terdapat 6 tabel yang saling berelasi, yaitu `customer`, `problem`, `produk`, `brand`, `kategori_produk`, dan `skin_type`.\
-
-1.  `Tabel customer`: Dalam data customer memiliki 6 kolom, diantaranya `kolom id_cust`, username, `gender`, `age`, `id_skin_type`, dan `job`.\
-    Customer memiliki relationship terhadap data problem dengan hubungan 1:N (satu ke banyak)\
-    Untuk kolom jenis kelamin akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = laki-laki dan 1 = perempuan.\
-    Untuk kolom usia akan dilakukan random generate number dari 18-65 tahun.\
-    Untuk kolom pekerjaan akan dilakukan random generate number 0 dan 1 dengan keterangan 0 = karyawan dan 1 = lainnya\
-
-2.  `Tabel Problem` memiliki 3 kolom yaitu `id_cust`, `skin_problem`, dan `alergi`.\
+2.  `Tabel Problem` memiliki 3 kolom yaitu `id_cust`, `skin_problem`, dan `alergi`.
     Dengan menggunakan data tersebut, akan dibuat riset berdasarkan permasalahan kulit untuk mengetahui kecocokan skincare seseorang berdasarkan ingredients.
-
     Satu id_cust memiliki permasalahan kulit yang berbeda-beda, namun dari beberapa orang pasti ada juga yang memiliki permasalahan kulit yang sama.\
     Kolom skin_problem berupa data kategorik\
     Kolom alergi berupa data kategorik\
 
 3.  `Tabel Produk` memiliki 7 kolom, diantaranya `id_cust`, `id_brand` , `nama_produk`, `komposisi`, `id-kategori`, `harga` dan `rating`.\
-    id_brand merupakan data kategori yang memiliki hubungan 1:1 dengan nama_brand yang dijelaskan pada kolom Brand. Namun, cust mungkin saja memakai brand yang sama meskipun produk berbeda. Sehingga cust ke brand memiliki hubungan M:N(banyak ke banyak) dan brand ke nama_produk memilikihubungan 1:N (satu ke banyak, karena satu brand mempunyai banyak nama_produk).
+    id_brand merupakan data kategori yang memiliki hubungan 1:1 dengan nama_brand yang dijelaskan pada kolom Brand. Namun, cust mungkin saja memakai brand yang sama     meskipun produk berbeda. Sehingga cust ke brand memiliki hubungan M:N(banyak ke banyak) dan brand ke nama_produk memiliki hubungan 1:N (satu ke banyak, karena       satu brand mempunyai banyak nama_produk).
 
     Kolom komposisi berupa data text.
-
-    Kolom id_kategori berupada data integer yang akan dijelaskan dalam kolom Kategori_Produk.\
-    Kolom harga berupa data integer dalam rupiah.\
-    Kolom rating berupa data double precision rating skala 1-5.\
+    Kolom `id_kategori` berupada data integer yang akan dijelaskan dalam kolom Kategori_Produk.\
+    Kolom `harga` berupa data integer dalam rupiah.\
+    Kolom `rating` berupa data double precision rating skala 1-5.\
 
 4.  `Tabel Kategori_Produk`, memiliki 2 kolom, diantaranya `id_kategori` dan `kategori`.\
     Kolom `id_kategori` berupa data integer\
@@ -82,17 +65,103 @@ Dalam database skincare yang dikembangkan, terdapat 6 tabel yang saling berelasi
 6.  `Tabel Brand` , memiliki 2 kolom, diantaranya `id_brand` dan `nama_brand`.\
     Kolom `id_brand` berupa data integer\
     Kolom `nama_brand` berupa data text yang menjelaskan keterangan dari id_brand
+</div>
 
-Berikut, deskripsi dan query SQL untuk membuat tabel:
+## :camera_flash: Screenshot
+1️⃣ Screenshot RShiny apps
 
-1.  Tabel Cust\
-    Tabel ini memiliki isi kolom sebagai berikut:\
-    `id cust` : data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY yang berhubungan dengan tabel problem.\
-    `username` : data text dengan length maksimal 20.\
-    `gender` : data integer\
-    `age` : data integer\
-    `id_skin_type` : data integer dengan keterangan 1 = kulit normal, 2= kulit berminyak, 3= kulit kering, 4 = kulit kombinasi, 5 = kulit sensitif. Kolom ini merupakan PRIMARY KEY yang berhubungan dengan tabel skin_type\
-    `job` : data integer
+Menampilkan Screenshoot front end dari database yang tersedia.
+
+<img width="750" alt="ssdashboard" src="https://user-images.githubusercontent.com/39205545/224741249-c9885e65-14f6-4839-93f0-35410db718c9.PNG">
+
+2️⃣  Daftar Customer
+
+Menampilkan informasi daftar customer dari MySkincare.
+
+
+3️⃣ Daftar Skin Type
+
+Menampilkan informasi daftar skin type dari MySkincare
+
+
+4️⃣ Daftar Produk
+
+Menampilkan informasi tentang produk-produk skincare
+
+5️⃣  Daftar Brand
+
+Menampilkan informasi tentang brand dari produk skincare
+
+
+
+6️⃣ Daftar Skin Problem
+
+Menampilkan informasi tentang permasalahan kulit pengguna skincare
+
+7️⃣ Daftar Kategori
+
+## :video_camera: Demo
+| url                      | login          |
+| ------------------------ | -------------- |
+|[ https://rekaagustiaastari.shinyapps.io/MySkincare/](https://rekaagustiaastari.shinyapps.io/MySkincare/)| rekaagustiaa@gmail.com |
+
+
+
+## :blue_book: Dokumentasi 
+
+Mencari Skin Problem
+
+sebagai contoh jika kita mencari skin problem maka akan muncul id_cust, skin_problem dan alergi.
+
+
+## :video_camera: Requirements
+
+- Paket R yang digunakan:
+
+library(shiny)
+
+library(shinydashboard)
+
+library(DT)
+
+library(RPostgreSQL)
+
+library(DBI)
+
+
+- RDBMS yang digunakan adalah PostgreSQL 15
+- Front End menggunakan RShiny UI
+- Back End menggunakan RShiny Server
+
+## :computer: Skema Database
+<img width="500" alt="Skema Database" src="https://user-images.githubusercontent.com/39205545/224727239-e6227c6a-363b-4302-a598-500f4c46f357.png">
+
+
+## :memo: Entity Relationship Diagram
+<img width="500" alt="ERD MySkincare" src="https://user-images.githubusercontent.com/39205545/226894568-fd317459-a355-4799-8e48-7c3aae46d83c.png">
+
+## :pencil: Deskripsi Data
+### Sintax Rancangan Database
+Berikut adalah deskripsi dan query SQL untuk membuat tabel:
+
+1️⃣ Tabel Customer
+<div align="justify">
+Tabel ini menyimpan isi kolom `id cust`, `username`, `gender`, `age`,  `id_skin_type` dan `job`
+</div>
+
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id cust       | Integer varying(10)   | Id Customer                     |
+| username      | text varying(20)      | Nama Pengguna                   |
+| gender        | integer               | Jenis Kelamin	                  |
+| age           | Integer               | Umur Customer                   |
+| id_skin_type  | Integer               | Id Jenis Kulit                  |
+| job           | integer               | Pekerjaan Customer              |
+
+| Primary Key         |
+|:--------------------|
+| id_cust,id_skin_type|
+
 
 ``` sql
 CREATE TABLE IF NOT EXISTS public."Cust"
@@ -114,16 +183,25 @@ CREATE TABLE IF NOT EXISTS public."Cust"
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
-)
+);
 ```
 
-2.  Tabel Problem
+2️⃣  Tabel Problem
 
-    Tabel ini memiliki isi kolom sebagai berikut:
+<div align="justify">
+Tabel ini menyimpan data id customer, permasalahan kulit dan apakah customer itu memiliki alergi atau tidak.
+</div>
 
-    `id_cust`: data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel cust dan tabel produk\
-    `skin_problem` : data text karena setiap cust mempunyai permasalahan kulit yang berbeda-beda.\
-    `alergi`: data tiap cust memiliki alergi terhadap suatu ingredients atau tidak.
+
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id_cust       | integer varying(10)   | Id Customer                     |
+| skin_problem  | text                  | Permasalahan Kulit              |
+| alergi        | text                  | Alergi Kulit                          |
+
+| Primary Key    | 
+|:---------------|
+| id_cust        | 
 
     ``` sql
     CREATE TABLE IF NOT EXISTS public."Problem"
@@ -132,22 +210,29 @@ CREATE TABLE IF NOT EXISTS public."Cust"
         skin_problem text COLLATE pg_catalog."default" NOT NULL,
         alergi text COLLATE pg_catalog."default" NOT NULL,
         CONSTRAINT "Problem_pkey" PRIMARY KEY (id_cust)
-    )
+    );
     ```
+3️⃣ Tabel Produk
+<div align="justify">
+ Tabel ini memiliki isi kolom id customer,id brand,nama produk, komposisi,id kategori, harga dan rating.
+</div>
 
-3.  Tabel Produk
 
-    Tabel ini memiliki isi kolom sebagai berikut:
-    
-    `id_cust` : data integer dengan length maksimal 10, NUT NULL artinya tidak ada data yang kosong pada kolom ini, dan kolom ini merupakan PRIMARY KEY karena berhubungan dengan tabel produk\
-        `id_brand` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada brand yang mereka gunakan, sehingga harus dikategorikan menjadi 52 kategori brand. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel brand\
-        `nama_produk` : setiap brand memiliki nama produk yang berbeda-beda sekalipun produk tersebut dari kategori yang sama.\
-        `komposisi` : setiap produk memiliki komposisi yang berbeda-beda\
-        `id-kategori` : data integer karena dari 100 data cust yang digunakan, terdapat duplicate pada kategori produk yang mereka gunakan, sehingga harus dikategorikan menjadi 14 kategori produk. Kolom ini merupakan PRIMARY KEY dan berhubungan dengan tabel kategori_produk.\
-        `harga` : data integer hasil dari scrapping data di internet. Harga yang tertera pada kolom ini sudah dalam rupiah.\
-        `rating` : data double precision dengan skala rating 1-5.
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id_cust       | integer varying(10)   | Id Customer        	      	  |
+| id_brand      | integer               | Id Brand        	     	  |
+| nama_produk   | text                  | Nama Produk 			  |
+| komposisi     | text                  | Komposisi produk                |
+| id_kategori   | integer               | Id Kategori    	          |
+| harga         | integer		| Harga Produk   		  |
+| rating        | double precision      | Rating Produk	                  |
 
-        ``` sql
+| Primary Key        | Foreign Key   | 
+|:-------------------|:--------------|
+| Kode Program Studi | Kode Fakultas |
+
+  ``` sql
         CREATE TABLE IF NOT EXISTS public."Produk"
         (
             id_cust integer NOT NULL,
@@ -173,70 +258,98 @@ CREATE TABLE IF NOT EXISTS public."Cust"
                 ON UPDATE NO ACTION
                 ON DELETE NO ACTION
                 NOT VALID
-        )
-        ```
+        );
+    ```
 
 
-
-
-4.  Tabel Skin_Type
-
-    Tabel ini memiliki isi kolom sebagai berikut:
-
+4️⃣ Tabel Skin Type
+<div align="justify">
+   Tabel Skin_Typel ini memiliki isi kolom sebagai berikut:
     `id_skin_type` : berupa data integer dan PRIMARY KEY karena memiliki relasi dengan tabel cust\
     `skin_type` : berupa data text yang menjelaskan keterangan dari id_skin_type.
+</div>
 
-    ``` sql
+
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id_skin_type  | integer 		| Id Jenis Kulit               	  |
+| skin_type     | text			| Jenis Kulit Customer            |
+
+
+ ``` sql
     CREATE TABLE IF NOT EXISTS public."Skin_Type"
     (
         id_skin_type integer NOT NULL,
         skin_type text COLLATE pg_catalog."default",
         CONSTRAINT "Skin_Type_pkey" PRIMARY KEY (id_skin_type)
-    )
+    );
     ```
 
-5.  Tabel Brand
+5️⃣  Tabel Brand
 
-    Tabel ini memiliki isi kolom sebagai berikut:
+<div align="justify">
+ Tabel ini memiliki isi kolom id brand dan nama brand
+</div>
 
-    `id_brand` : berupa data integer dan PRIMARY KEY karena memiliki relasi dengan tabel produk\
-    `nama_brand` : berupa data text yang menjelaskan keterangan dari id_brand.
 
-    ``` sql
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id_brand      | integer		| Id Brand              	  |
+| nama_brand    | text                  | Nama Brand produk               |
+
+
+``` sql
     CREATE TABLE IF NOT EXISTS public."Brand"
     (
         nama_brand text COLLATE pg_catalog."default" NOT NULL,
         id_brand integer NOT NULL,
         CONSTRAINT "Brand_pkey" PRIMARY KEY (id_brand)
-    )
+    );
     ```
+6️⃣  Tabel Kategorik Produk
 
-6.  Tabel Kategori_Produk
+<div align="justify">
+ Tabel ini memiliki isi kolom id kategori dan kategori
+</div>
 
-    Tabel ini memiliki isi kolom sebagai berikut:
 
-    `id_kategori` : berupa data integer dan PRIMARY KEY karena memiliki relasi dengan tabel produk\
-    `kategori` : berupa data text yang menjelaskan keterangan dari id_kategori.
+| Attribute     | Type                  | Description                     |
+|:--------------|:----------------------|:--------------------------------|
+| id_kategori   | integer		| Id Kategori              	  |
+| kategori      | text                  | Kategori              	  |
 
-    ``` sql
+ ``` sql
     CREATE TABLE IF NOT EXISTS public."Kategori_Produk"
     (
         id_kategori integer NOT NULL,
         kategori text COLLATE pg_catalog."default" NOT NULL,
         CONSTRAINT "Kategori_Produk_pkey" PRIMARY KEY (id_kategori)
-    )
+    );
     ```
+ 
+### :open_file_folder: Struktur Folder
 
-## Link Rshiny
+```
+.
+├── app           # ShinyApps
+│   ├── css
+│   │   ├── **/*.css
+│   ├── server.R
+│   └── ui.R
+├── data 
+│   ├── xlsx
+│   └── sql
+|       └── db.sql
+├── src           # Project source code
+├── doc           # Doc for the project
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
-<https://rekaagustiaastari.shinyapps.io/MySkincare/>
+## :fireworks: Anggota Tim Pengembang
+1. Fradha Intan Arassah   (G1501221018) : Data Manager
+2. Reka Agustia Astari    (G1501221010) : Shiny Developer
+3. Firda Aulia Maghfiroh  (G1501222049) : Technical Writer)
+4. Ainun Salsabila        (G1501222038) 
 
-## Tim Pengembang
-
-Fradha Intan Arassah : Data Manager
-
-Reka Agustia Astari : Shiny Developer
-
-Firda Aulia Maghfiroh : Tech Writer
-
-Ainun Salsabila

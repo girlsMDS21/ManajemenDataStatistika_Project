@@ -90,7 +90,7 @@ Menampilkan informasi daftar skin type dari MySkincare
 4️⃣ Daftar Produk
 
 Menampilkan informasi tentang produk-produk skincare
-<img width="750" alt="4" src="https://user-images.githubusercontent.com/39205545/228095513-b3d88945-75e6-496a-8863-0d6b6f7e18bb.PNG">
+<img width="750" alt="produu" src="https://user-images.githubusercontent.com/39205545/228097439-2404ccf5-38c8-41d6-aa92-9062dfe8ea38.PNG">
 
 
 5️⃣  Daftar Brand

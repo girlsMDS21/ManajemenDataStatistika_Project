@@ -72,33 +72,43 @@ Data yang digunakan pada project ini adalah data skincare. Data tersebut diperol
 
 Menampilkan Screenshoot front end dari database yang tersedia.
 
-<img width="750" alt="ssdashboard" src="https://user-images.githubusercontent.com/39205545/224741249-c9885e65-14f6-4839-93f0-35410db718c9.PNG">
+<img width="750" alt="1" src="https://user-images.githubusercontent.com/39205545/228095320-0a552e74-4c24-4f2b-bed9-9010f8dda291.PNG">
+
 
 2️⃣  Daftar Customer
 
 Menampilkan informasi daftar customer dari MySkincare.
+<img width="750" alt="2" src="https://user-images.githubusercontent.com/39205545/228095435-d7e0b7c1-2dcc-48d8-b6c8-5863fa3af6ae.PNG">
 
 
 3️⃣ Daftar Skin Type
 
 Menampilkan informasi daftar skin type dari MySkincare
+<img width="750" alt="3" src="https://user-images.githubusercontent.com/39205545/228095477-ba0e1573-e492-4c6b-b160-41c60f572ddc.PNG">
 
 
 4️⃣ Daftar Produk
 
 Menampilkan informasi tentang produk-produk skincare
+<img width="750" alt="4" src="https://user-images.githubusercontent.com/39205545/228095513-b3d88945-75e6-496a-8863-0d6b6f7e18bb.PNG">
+
 
 5️⃣  Daftar Brand
 
 Menampilkan informasi tentang brand dari produk skincare
-
+<img width="750" alt="5" src="https://user-images.githubusercontent.com/39205545/228095557-a891c901-e8ab-45cd-a326-a00c235058ba.PNG">
 
 
 6️⃣ Daftar Skin Problem
 
 Menampilkan informasi tentang permasalahan kulit pengguna skincare
+<img width="750" alt="6" src="https://user-images.githubusercontent.com/39205545/228095596-80989373-4c42-4ef8-9396-b98fd162cc3c.PNG">
+
 
 7️⃣ Daftar Kategori
+Menampilkan informasi ID kategori produk
+<img width="750" alt="7" src="https://user-images.githubusercontent.com/39205545/228095631-b276eadf-cd2e-4f01-90af-86f0e3dcd756.PNG">
+
 
 ## :video_camera: Demo
 | url                      | login          |
@@ -134,7 +144,7 @@ library(DBI)
 - Back End menggunakan RShiny Server
 
 ## :computer: Skema Database
-<img width="500" alt="Skema Database" src="https://user-images.githubusercontent.com/39205545/224727239-e6227c6a-363b-4302-a598-500f4c46f357.png">
+<img width="500" alt="skema database skincare drawio (1) (2)" src="https://user-images.githubusercontent.com/39205545/228095841-eab32014-05ff-438d-b374-934015c08c7a.png">
 
 
 ## :memo: Entity Relationship Diagram
